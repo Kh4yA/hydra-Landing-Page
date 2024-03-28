@@ -1,0 +1,11 @@
+.btn1{
+background: $linear-color;
+color: $primary-color;
+@include button;
+}
+.btn2{
+background: transparent;
+border: 1px solid rgb(255, 255, 255);
+color: $white;
+@include button;
+}

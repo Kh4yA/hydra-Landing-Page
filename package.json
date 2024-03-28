@@ -1,0 +1,14 @@
+{
+  "name": "hydra-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass --watch assets/main.scss public/css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.72.0"
+  }
+}
