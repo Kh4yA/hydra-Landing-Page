@@ -72,6 +72,7 @@
       font-size: 24px;
     }
   }
+  //formulaire
   .formulaire {
     h2 {
       font-size: 24px;
@@ -81,13 +82,23 @@
       input[type="text"],
       input[type="email"],
       input[type="tel"] {
-        max-width: 378px;
-        width: 200%;
+        max-width: 400px;
+        width: 100%;
       }
     }
     .name,
     .email {
       gap: 30px;
+    }
+    .name,
+    .email{
+      flex-wrap: wrap;
+      div{
+        width: 100%;
+        input{
+          width: 200%;
+        }
+      }
     }
   }
   //footer

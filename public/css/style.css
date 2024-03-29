@@ -856,12 +856,24 @@ body {
   .formulaire div input[type=text],
   .formulaire div input[type=email],
   .formulaire div input[type=tel] {
-    max-width: 378px;
-    width: 200%;
+    max-width: 400px;
+    width: 100%;
   }
   .formulaire .name,
   .formulaire .email {
     gap: 30px;
+  }
+  .formulaire .name,
+  .formulaire .email {
+    flex-wrap: wrap;
+  }
+  .formulaire .name div,
+  .formulaire .email div {
+    width: 100%;
+  }
+  .formulaire .name div input,
+  .formulaire .email div input {
+    width: 200%;
   }
   .footer p {
     margin-right: auto;
