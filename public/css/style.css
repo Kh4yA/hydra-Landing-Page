@@ -441,6 +441,7 @@ body {
     height: 4px;
     background: linear-gradient(90deg, #c0b7e8 -15.79%, #8176af 100%);
     border-radius: 12px;
+    transition: width 0.3s ease;
   }
   #openBurger #burger::after, #openBurger #burger::before {
     content: "";
@@ -452,12 +453,28 @@ body {
     width: 33px;
     height: 4px;
     border-radius: 12px;
+    transition: all 0.5s ease;
   }
   #openBurger #burger::after {
     top: 10px;
   }
   #openBurger #burger::before {
     top: -10px;
+  }
+  #openBurger #burger.open {
+    width: 0;
+  }
+  #openBurger #burger.open::after {
+    background: red;
+    top: 12px;
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+  }
+  #openBurger #burger.open::before {
+    background: red;
+    top: -12px;
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
   }
 }
 .intro-box {

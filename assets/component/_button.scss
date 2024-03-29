@@ -22,6 +22,7 @@
       height: 4px;
       background: linear-gradient(90deg, #c0b7e8 -15.79%, #8176af 100%);
       border-radius: 12px;
+      transition: width .3s ease;
       &::after,
       &::before {
         content: "";
@@ -33,6 +34,8 @@
         width: 33px;
         height: 4px;
         border-radius: 12px;
+        transition: all .5s ease;
+
       }
       &::after {
         top: 10px;
@@ -40,6 +43,23 @@
       &::before {
         top: -10px;
       }
+    }
+    #burger.open{
+      width: 0;
+    }
+    #burger.open::after{
+      background: red;
+      top: 12px;
+      transform: rotate(45deg);
+      transition: all .5s ease;
+
+    }
+    #burger.open::before{
+      background: red;
+      top: -12px;
+      transform: rotate(-45deg);
+      transition: all .5s ease;
+
     }
   }
 }

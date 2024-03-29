@@ -1,3 +1,5 @@
+let burger = document.getElementById('burger')
+let openBurger = document.getElementById('openBurger')
 const swiper1 = new Swiper('.swiper1', {
     // Optional parameters
     direction: 'horizontal',
@@ -39,7 +41,6 @@ const swiperTechnologie = new Swiper('.swiper-technologie', {
     // Optional parameters
     direction: 'horizontal',
     slidesPerView: `1`,
-
     breakpoints: {
         579:{
             slidesPerView: 4,
@@ -67,3 +68,7 @@ const swiperNumber = new Swiper('.swiper-number', {
         prevEl: '.swiper-button-prev',
     },
   });
+openBurger.addEventListener('click', ()=>{
+    console.log('tap');
+    burger.classList.toggle('open')
+})
