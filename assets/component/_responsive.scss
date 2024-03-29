@@ -1,0 +1,109 @@
+@media all and (max-width: 579px) {
+  //GENERALE
+  .container-1440 {
+    padding: 35px 15px;
+  }
+  .padding-bottom-responsive {
+    padding-bottom: 50px;
+  }
+  .responsive-none {
+    display: none;
+  }
+  h2 {
+    text-align: center;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  .ligth {
+    font-weight: 100;
+  }
+  .marge-responsive {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  //HERO
+  .hero {
+    flex-direction: row;
+    background-size: 1100px;
+    background-position: right -80px top -100px;
+    height: auto;
+    .hero-content {
+      flex-direction: column-reverse;
+      h1 {
+        font-size: 24px;
+        margin: auto;
+        margin-left: auto;
+      }
+      span {
+        font-size: 36px;
+      }
+    }
+    .hero-content div:nth-child(3) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  .nav {
+    display: none;
+  }
+  .join {
+    display: none;
+  }
+  .nav-bottom {
+    width: 100%;
+    max-height: 109px;
+    margin-top: 30px;
+    img {
+      width: 70px;
+    }
+  }
+  //technologie
+  .technologie {
+    background-position: -130px 0;
+    background-repeat: no-repeat;
+    background-size: 700px;
+    height: 164px;
+    border-radius: 60px;
+    h3 {
+      font-size: 16px;
+    }
+    > div :nth-child(2) {
+      font-size: 24px;
+    }
+  }
+  .formulaire {
+    h2 {
+      font-size: 24px;
+    }
+    div {
+      flex-direction: column;
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+        max-width: 378px;
+        width: 200%;
+      }
+    }
+    .name,
+    .email {
+      gap: 30px;
+    }
+  }
+  //footer
+  .footer {
+    p {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+    .social {
+      display: flex;
+      align-content: center;
+      flex-direction: column;
+      margin: auto;
+      gap: 20px;
+      padding-top: 20px;
+    }
+  }
+}

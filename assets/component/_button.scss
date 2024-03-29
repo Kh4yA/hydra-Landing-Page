@@ -1,11 +1,45 @@
-.btn1{
-background: $linear-color;
-color: $primary-color;
-@include button;
+.btn1 {
+  background: $linear-color;
+  color: $primary-color;
+  @include button;
 }
-.btn2{
-background: transparent;
-border: 1px solid rgb(255, 255, 255);
-color: $white;
-@include button;
+.btn2 {
+  background: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  color: $white;
+  @include button;
+}
+#openBurger {
+  display: none;
+}
+@media all and (max-width: 579px) {
+  #openBurger {
+    display: block;
+    #burger {
+      position: relative;
+      display: inline-block;
+      width: 24px;
+      height: 4px;
+      background: linear-gradient(90deg, #c0b7e8 -15.79%, #8176af 100%);
+      border-radius: 12px;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        transform-origin: right;
+        right: 0px;
+        background: linear-gradient(90deg, #c0b7e8 -15.79%, #8176af 100%);
+        width: 33px;
+        height: 4px;
+        border-radius: 12px;
+      }
+      &::after {
+        top: 10px;
+      }
+      &::before {
+        top: -10px;
+      }
+    }
+  }
 }

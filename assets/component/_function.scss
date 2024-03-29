@@ -21,14 +21,14 @@ $gutter: 16px;
 }
 
 //Tablets/
-@media all and (max-width : 700px){
+@media all and (min-width:580px)and (max-width : 768px){
   .medium{
   @include largeur-modifier;
   }
 }
 
 //Smartphones/
-@media all and (max-width : 400px){
+@media all and (max-width : 579px){
   .small{
     @include largeur-modifier;
   }
@@ -70,7 +70,7 @@ $gutter: 16px;
     width: calc(100% - 0px);
   }
   
-  @media all and (max-width: 700px) {
+  @media all and (max-width: 768px) {
     .medium-1 {
       width: calc(8.3333333333% - 14.6666666667px);
     }
@@ -108,7 +108,7 @@ $gutter: 16px;
         width: calc(100% - 0px);
       }
   }
-  @media all and (max-width: 400px) {
+  @media all and (max-width: 579px) {
     .small-1 {
       width: calc(8.3333333333% - 14.6666666667px);
     }

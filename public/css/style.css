@@ -52,7 +52,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 img,
@@ -126,7 +126,7 @@ a {
   width: calc(100% - 0px);
 }
 
-@media all and (max-width: 700px) {
+@media all and (min-width: 580px) and (max-width: 768px) {
   .medium-1 {
     width: calc(8.3333333333% - 14.6666666667px);
   }
@@ -164,7 +164,7 @@ a {
     width: calc(100% - 0px);
   }
 }
-@media all and (max-width: 400px) {
+@media all and (max-width: 579px) {
   .small-1 {
     width: calc(8.3333333333% - 14.6666666667px);
   }
@@ -250,7 +250,7 @@ a {
   width: calc(100% - 0px);
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 768px) {
   .medium-1 {
     width: calc(8.3333333333% - 14.6666666667px);
   }
@@ -288,7 +288,7 @@ a {
     width: calc(100% - 0px);
   }
 }
-@media all and (max-width: 400px) {
+@media all and (max-width: 579px) {
   .small-1 {
     width: calc(8.3333333333% - 14.6666666667px);
   }
@@ -336,6 +336,11 @@ a {
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .space-between {
@@ -421,6 +426,40 @@ body {
   height: 50px;
 }
 
+#openBurger {
+  display: none;
+}
+
+@media all and (max-width: 579px) {
+  #openBurger {
+    display: block;
+  }
+  #openBurger #burger {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 4px;
+    background: linear-gradient(90deg, #c0b7e8 -15.79%, #8176af 100%);
+    border-radius: 12px;
+  }
+  #openBurger #burger::after, #openBurger #burger::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    transform-origin: right;
+    right: 0px;
+    background: linear-gradient(90deg, #c0b7e8 -15.79%, #8176af 100%);
+    width: 33px;
+    height: 4px;
+    border-radius: 12px;
+  }
+  #openBurger #burger::after {
+    top: 10px;
+  }
+  #openBurger #burger::before {
+    top: -10px;
+  }
+}
 .intro-box {
   background-image: url("../../public/img/courbes-about-hydra-vr.png");
   background-repeat: no-repeat;
@@ -434,7 +473,7 @@ body {
   color: #fff;
 }
 .intro-box .introduction .intro-text {
-  width: 51%;
+  width: 51;
 }
 .intro-box .introduction h2 {
   min-width: 254px;
@@ -479,7 +518,7 @@ body {
 }
 .card-container .card .card-img img {
   width: 100%;
-  border-radius: 60%;
+  border-radius: 50%;
   border: 17px solid rgba(0, 0, 0, 0.13);
 }
 .card-container .card .line2 {
@@ -526,7 +565,8 @@ body {
   background-position-y: 20%;
 }
 .number-container .number {
-  width: 158px;
+  max-width: 158px;
+  width: 100%;
   height: 158px;
   font-size: 64px;
   color: #343045;
@@ -554,14 +594,15 @@ body {
   width: 100%;
 }
 .formulaire .line-separated {
-  width: 414px;
+  max-width: 414px;
+  width: 100%;
   height: 1px;
   background-image: linear-gradient(90deg, #343045 0%, #8176af 35%, #c0b7e8 69%, #343045 100%);
 }
 .formulaire form {
   flex-wrap: wrap;
   gap: 30px;
-  width: 1058px;
+  max-width: 1058px;
 }
 .formulaire form .name,
 .formulaire form .email {
@@ -574,7 +615,7 @@ body {
 .formulaire form .name input,
 .formulaire form .email input {
   height: 72px;
-  width: 524px;
+  width: 100%;
   border-radius: 40px;
   background-color: transparent;
   border: 1px solid white;
@@ -652,10 +693,6 @@ body {
   text-align: center;
 }
 
-.nav ul {
-  gap: 42px;
-}
-
 .hero {
   background-image: url(../../public/img/courbes-hero.png);
   background-size: contain;
@@ -669,7 +706,6 @@ body {
 }
 .hero .hero-content {
   width: 100%;
-  padding: 8vh 0;
 }
 .hero .hero-content h1 {
   font-size: 40px;
@@ -701,9 +737,6 @@ body {
   border-radius: 90px;
   padding: 0 50px;
 }
-.hero .nav-bottom > div {
-  gap: 20px;
-}
 .hero .nav-bottom p {
   color: #fff;
   font-size: 14px;
@@ -720,6 +753,112 @@ body {
   width: 1px;
   height: 70%;
   background-color: rgba(192, 183, 232, 0.33);
+}
+.hero .nav-bottom .swiper-slide {
+  flex-wrap: nowrap;
+  height: 0;
+}
+
+@media all and (max-width: 579px) {
+  .container-1440 {
+    padding: 35px 15px;
+  }
+  .padding-bottom-responsive {
+    padding-bottom: 50px;
+  }
+  .responsive-none {
+    display: none;
+  }
+  h2 {
+    text-align: center;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  .ligth {
+    font-weight: 100;
+  }
+  .marge-responsive {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .hero {
+    flex-direction: row;
+    background-size: 1100px;
+    background-position: right -80px top -100px;
+    height: auto;
+  }
+  .hero .hero-content {
+    flex-direction: column-reverse;
+  }
+  .hero .hero-content h1 {
+    font-size: 24px;
+    margin: auto;
+    margin-left: auto;
+  }
+  .hero .hero-content span {
+    font-size: 36px;
+  }
+  .hero .hero-content div:nth-child(3) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .nav {
+    display: none;
+  }
+  .join {
+    display: none;
+  }
+  .nav-bottom {
+    width: 100%;
+    max-height: 109px;
+    margin-top: 30px;
+  }
+  .nav-bottom img {
+    width: 70px;
+  }
+  .technologie {
+    background-position: -130px 0;
+    background-repeat: no-repeat;
+    background-size: 700px;
+    height: 164px;
+    border-radius: 60px;
+  }
+  .technologie h3 {
+    font-size: 16px;
+  }
+  .technologie > div :nth-child(2) {
+    font-size: 24px;
+  }
+  .formulaire h2 {
+    font-size: 24px;
+  }
+  .formulaire div {
+    flex-direction: column;
+  }
+  .formulaire div input[type=text],
+  .formulaire div input[type=email],
+  .formulaire div input[type=tel] {
+    max-width: 378px;
+    width: 200%;
+  }
+  .formulaire .name,
+  .formulaire .email {
+    gap: 30px;
+  }
+  .footer p {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+  .footer .social {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    margin: auto;
+    gap: 20px;
+    padding-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

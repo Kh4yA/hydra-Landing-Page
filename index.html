@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- lien css -->
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="public/css/style.css">
     <title>Document</title>
 </head>
@@ -12,79 +13,91 @@
 <body>
     <!-- Hero -->
     <div class="hero container-1440 flex flex-column space-between">
-        <header class="">
-            <div class="header flex space-between item-center">
-                <div class="logo flex item-center">
+        <!-- header -->
+        <header>
+            <div class="header flex space-between item-center large-12 small-12">
+                <div class="logo flex item-center small-5">
                     <img src="public/img/logo-header.png" alt="logo">
                 </div>
-                <div class="nav">
-                    <ul class="flex">
+                <nav class="nav">
+                    <ul class="flex gap-40">
                         <li><a href="#">ABOUT</a></li>
                         <li><a href="#">SERVICES</a></li>
                         <li><a href="#">TECHNOLOGIES</a></li>
                         <li><a href="#">HOW TO</a></li>
                     </ul>
-                </div>
+                </nav>
                 <div class="join flex gap-40">
                     <a href="" class="btn2 flex item-center">CONTACT US</a>
                     <a href="" class="btn1 flex item-center">JOIN HYDRA</a>
                 </div>
+                <div id="openBurger"><span id="burger"></span></div>
             </div>
         </header>
-        <div class="hero-content hero-content flex space-between item-center">
-            <div class="large-5 flex flex-column gap-40 justify-center">
+        <!-- hero-content -->
+        <div class="hero-content flex space-between item-center">
+            <div class="large-5 flex flex-column gap-40 justify-center small-12">
                 <h1><span class="color-text">Dive</span> Into The Depths
                     <br>
                     Of <span class="color-text">Virtual Reality</span>
                 </h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, doloremque? Vel debitis illo
+                <p class="responsive-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum,
+                    doloremque? Vel debitis illo
                     quaerat fuga laudantium harum adipisci, inventore facilis sit doloremque iste illum atque quisquam
                     eaque nostrum neque fugiat?</p>
                 <div class="flex gap-40">
                     <a href="#" class="btn1">BUILD YOUR WORLD</a>
-                    <img src="./public/img/shape.png" alt="arrow">
+                    <img src="./public/img/shape.png" alt="arrow" class="responsive-none">
                 </div>
             </div>
-            <div class="hero-img large-5"><img src="./public/img/pexels-michelangelo-buonarroti-8728382 1.png"
+            <div class="hero-img large-5 small-12"><img src="./public/img/pexels-michelangelo-buonarroti-8728382 1.png"
                     alt="image d'une femme avec un casque de reéalité virtuel"></div>
         </div>
-        <div class="nav-bottom flex space-between item-center">
-            <div class="flex item-center">
-                <div><img src="public/img/Location-Icon.png" alt="Logo de localisation"></div>
-                <div>
-                    <p><span>Pay Us a Visit</span></p>
-                    <p>Union St, Seattle, WA 98101, United States</p>
+        <!-- hero-nav-bottom -->
+        <div class="nav-bottom swiper swiper1 container-1440">
+            <div class="swiper-wrapper space-arround item-center small-12">
+                <div class="flex item-center swiper-slide width100">
+                    <div><img src="public/img/Location-Icon.png" alt="Logo de localisation"></div>
+                    <div class="width100">
+                        <p class="responsive-none"><span>Pay Us a Visit</span></p>
+                        <p>Union St, Seattle, WA 98101, United States</p>
+                    </div>
+                </div>
+                <div class="separated responsive-none"></div>
+                <div class="flex item-center swiper-slide justify-center">
+                    <div><img src="public/img/phone-call.png" alt="Logo de telephone"></div>
+                    <div>
+                        <p class="responsive-none"><span>Give Us a Call</span></p>
+                        <p><a href="#">(110) 1111-1010</a></p>
+                    </div>
+                </div>
+                <div class="separated responsive-none"></div>
+                <div class="flex item-center swiper-slide justify-center">
+                    <div><img src="public/img/mail.png" alt="Logo de mail"></div>
+                    <div>
+                        <p class="responsive-none"><span>Send Us a Message</span></p>
+                        <p><a href="#">Contact@HydraVTech.com</a></p>
+                    </div>
                 </div>
             </div>
-            <div class="separated"></div>
-            <div class="flex item-center">
-                <div><img src="public/img/phone-call.png" alt="Logo de telephone"></div>
-                <div>
-                    <p><span>Give Us a Call</span></p>
-                    <p><a href="#">(110) 1111-1010</a></p>
-                </div>
-            </div>
-            <div class="separated"></div>
-            <div class="flex item-center">
-                <div><img src="public/img/mail.png" alt="Logo de mail"></div>
-                <div>
-                    <p><span>Send Us a Message</span></p>
-                    <p><a href="#">Contact@HydraVTech.com</a></p>
-                </div>
-            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
+    <!-- main -->
     <main class="">
+        <!-- intro-box -->
         <div class="intro-box">
-            <div class="introduction container-1440 flex space-between item-center">
-                <div class="">
+            <div class="introduction container-1440 flex space-between item-center small-12">
+                <div class="marge-responsive">
                     <h2 class="bold">INTRODUCTION</h2>
                     <div class="flex item-center gap-40">
                         <h2>TO HYDRA VR</h2>
-                        <div class="introduction-img"><img src="public/img/arrow-right-long.png" alt="arrow"></div>
+                        <div class="introduction-img responsive-none"><img src="public/img/arrow-right-long.png"
+                                alt="arrow"></div>
                     </div>
                 </div>
-                <div class="intro-text">
+                <div class="intro-text responsive-none">
                     <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat
                         nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
                         quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
@@ -92,11 +105,11 @@
                 </div>
             </div>
             <div class="container-1440 flex space-between">
-                <div class="intro-img large-5"><img src="public/img/pexels-shvets-production-75620141.png"
-                        alt="homme avec un casque vr"></div>
-                <div class="about large-6 flex flex-column justify-center gap-40">
-                    <h2><span class="bold">ABOUT</span> <br> HYDRA VR </h2>
-                    <p>Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus
+                <div class="intro-img large-5 small-12 padding-bottom-responsive"><img
+                        src="public/img/pexels-shvets-production-75620141.png" alt="homme avec un casque vr"></div>
+                <div class="about large-6 flex flex-column justify-center gap-40 small-12 padding-bottom-responsive">
+                    <h2 class=" responsive-none"><span class="bold">ABOUT</span> <br> HYDRA VR </h2>
+                    <p class="">Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus
                         urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida
                         dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in.
                         Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet
@@ -105,105 +118,123 @@
                         cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla pha
                         retra diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi
                         n tempor.</p>
-                    <div><a href="#" class="btn1">LET'S GET IN TOUCH</a></div>
+                    <div class="marge-responsive"><a href="#" class="btn1">LET'S GET IN TOUCH</a></div>
                 </div>
             </div>
         </div>
         <!-- Card -->
         <div class="why-build-box">
             <div class="build-box container-1440 flex space-between item-center">
-                <div class="">
+                <div class=" marge-responsive">
                     <h2 class="bold">WHY BUILD</h2>
                     <div class="flex item-center gap-40">
                         <h2>WITH HYDRA?</h2>
-                        <div class="introduction-img"><img src="public/img/arrow-right-long.png" alt="arrow"></div>
+                        <div class="introduction-img responsive-none"><img src="public/img/arrow-right-long.png"
+                                alt="arrow"></div>
                     </div>
                 </div>
-                <div class="build-text">
+                <div class="build-text responsive-none">
                     <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat
                         nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
                         quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
                         lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
                 </div>
             </div>
-            <div class="card-container container-1440 flex space-between">
-                <!-- card 1 -->
-                <div class="card large-3 flex flex-column space-between item-center">
-                    <div class="card-img"><img src="public/img/pexels-shvets-production-7561969 1.png" alt=""></div>
-                    <h3>SIMULATION</h3>
-                    <div class="line2"></div>
-                    <p>Vitae sapien pellentesque habitant morbi
-                        nunc. Viverra aliquet porttitor rhoncus
-                        libero justo laoreet sit amet vitae.</p>
-                    <div><a href="" class="btn1">TRY IT NOW</a></div>
-                </div>
-                <!-- card 2 -->
-                <div class="card large-3 flex flex-column space-between item-center">
-                    <div class="card-img"><img src="public/img/pexels-mikhail-nilov-7887140 1.png" alt=""></div>
-                    <h3>EDUCATION</h3>
-                    <div class="line2"></div>
-                    <p>Vitae sapien pellentesque habitant morbi
-                        nunc. Viverra aliquet porttitor rhoncus
-                        libero justo laoreet sit amet vitae.</p>
-                    <div><a href="" class="btn1">TRY IT NOW</a></div>
-                </div>
-                <!-- card 3 -->
-                <div class="card large-3 flex flex-column space-between item-center">
-                    <div class="card-img"><img src="public/img/pexels-rodnae-productions-80982631.png" alt=""></div>
-                    <h3>SELF-CARE</h3>
-                    <div class="line2"></div>
-                    <p>Vitae sapien pellentesque habitant morbi
-                        nunc. Viverra aliquet porttitor rhoncus
-                        libero justo laoreet sit amet vitae.</p>
-                    <div><a href="" class="btn1">TRY IT NOW</a></div>
-                </div>
-                <!-- card 4 -->
-                <div class="card large-3 flex flex-column space-between item-center">
-                    <div class="card-img"><img src="public/img/pexels-mali-maeder-756439 1.png" alt=""></div>
-                    <h3>OUTDOOR</h3>
-                    <div class="line2"></div>
-                    <p>Vitae sapien pellentesque habitant morbi
-                        nunc. Viverra aliquet porttitor rhoncus
-                        libero justo laoreet sit amet vitae.</p>
-                    <div><a href="" class="btn1">TRY IT NOW</a></div>
+            <div class="card-container container-1440">
+                <div class="swiper swiper2 ">
+                    <div class="swiper-wrapper">
+                        <!-- card 1 -->
+                        <div
+                            class="swiper-slide card large-3 small-12 flex flex-column space-between item-center">
+                            <div class="card-img"><img src="public/img/pexels-shvets-production-7561969 1.png" alt="">
+                            </div>
+                            <h3>SIMULATION</h3>
+                            <div class="line2"></div>
+                            <p>Vitae sapien pellentesque habitant morbi
+                                nunc. Viverra aliquet porttitor rhoncus
+                                libero justo laoreet sit amet vitae.</p>
+                            <div><a href="" class="btn1">TRY IT NOW</a></div>
+                        </div>
+                        <!-- card 2 -->
+                        <div
+                            class="swiper-slide card large-3 small-12 flex flex-column space-between item-center">
+                            <div class="card-img"><img src="public/img/pexels-mikhail-nilov-7887140 1.png" alt=""></div>
+                            <h3>EDUCATION</h3>
+                            <div class="line2"></div>
+                            <p>Vitae sapien pellentesque habitant morbi
+                                nunc. Viverra aliquet porttitor rhoncus
+                                libero justo laoreet sit amet vitae.</p>
+                            <div><a href="" class="btn1">TRY IT NOW</a></div>
+                        </div>
+                        <!-- card 3 -->
+                        <div
+                            class="swiper-slide card large-3 small-12 flex flex-column space-between item-center">
+                            <div class="card-img"><img src="public/img/pexels-rodnae-productions-80982631.png" alt="">
+                            </div>
+                            <h3>SELF-CARE</h3>
+                            <div class="line2"></div>
+                            <p>Vitae sapien pellentesque habitant morbi
+                                nunc. Viverra aliquet porttitor rhoncus
+                                libero justo laoreet sit amet vitae.</p>
+                            <div><a href="" class="btn1">TRY IT NOW</a></div>
+                        </div>
+                        <!-- card 4 -->
+                        <div
+                            class="swiper-slide card large-3 small-12 flex flex-column space-between item-center">
+                            <div class="card-img"><img src="public/img/pexels-mali-maeder-756439 1.png" alt=""></div>
+                            <h3>OUTDOOR</h3>
+                            <div class="line2"></div>
+                            <p>Vitae sapien pellentesque habitant morbi
+                                nunc. Viverra aliquet porttitor rhoncus
+                                libero justo laoreet sit amet vitae.</p>
+                            <div><a href="" class="btn1">TRY IT NOW</a></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
                 </div>
             </div>
         </div>
-        <!-- tachnologie -->
+        <!-- technologie -->
         <div class=" container-1440">
-        <div class="technologie container-1440 flex item-center justify-center">
-            <div class="">
-                <h3><span class="bold">TECHNOLOGIES & HARDWARE</span></h3>
-                <h3>USED BY HYDRA VR.</h3>
+            <div class="technologie container-1440 flex item-center justify-center">
+                <div>
+                    <h3><span class="bold">TECHNOLOGIES & HARDWARE</span></h3>
+                    <h3>USED BY HYDRA VR.</h3>
+                </div>
+                <div class="chevron responsive-none"><img src="public/img/outline/chevron-small-down.png" alt=""></div>
             </div>
-            <div class="chevron"><img src="public/img/outline/chevron-small-down.png" alt=""></div>
-        </div>
-            <div class="sponsor flex space-arround item-center">
-                <div> <img src="/public/img/unreal-logo.png" alt=""></div>
-                <div> <img src="/public/img/unity-logo.png" alt=""></div>
-                <div> <img src="/public/img/oculus-logo.png" alt=""></div>
-                <div> <img src="/public/img/vive-logo.png" alt=""></div>
+            <div class="swiper swiper-technologie">
+                <div class="swiper-wrapper sponsor space-arround item-center">
+                    <div class="swiper-slide flex justify-center item-center"><img src="/public/img/unreal-logo.png" alt=""></div>
+                    <div class="swiper-slide flex justify-center item-center"><img src="/public/img/unity-logo.png" alt=""></div>
+                    <div class="swiper-slide flex justify-center item-center"><img src="/public/img/oculus-logo.png" alt=""></div>
+                    <div class="swiper-slide flex justify-center item-center"><img src="/public/img/vive-logo.png" alt=""></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
         <div>
             <div class="build-box container-1440 flex space-between item-center">
-                <div class="">
+                <div class=" marge-responsive">
                     <h2 class="bold">WHY BUILD</h2>
                     <div class="flex item-center gap-40">
                         <h2>WITH HYDRA?</h2>
-                        <div class="introduction-img"><img src="public/img/arrow-right-long.png" alt="arrow"></div>
+                        <div class="introduction-img responsive-none"><img src="public/img/arrow-right-long.png" alt="arrow"></div>
                     </div>
                 </div>
-                <div class="build-text large-6">
+                <div class="build-text large-6 responsive-none">
                     <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat
                         nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
                         quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare
                         lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
                 </div>
             </div>
-            <div class="number-container ">
-                <div class="flex container-1440 space-arround">
-                    <div class="flex flex-column item-center">
+            <div class="swiper swiper-number number-container ">
+                <div class="swiper-wrapper container-1440 space-arround">
+                    <div class="swiper-slide flex flex-column item-center">
                         <div class="number flex item-center justify-center"><span class="bold">01</span></div>
                         <div class="number-text flex">
                             <div>
@@ -214,7 +245,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-column item-center">
+                    <div class="swiper-slide flex flex-column item-center">
                         <div class="number flex item-center justify-center"><span class="bold">02</span></div>
                         <div class="number-text flex">
                             <div>
@@ -225,7 +256,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-column item-center">
+                    <div class="swiper-slide flex flex-column item-center">
                         <div class="number flex item-center justify-center"><span class="bold">03</span></div>
                         <div class="number-text flex">
                             <div>
@@ -236,7 +267,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-column item-center">
+                    <div class="swiper-slide flex flex-column item-center">
                         <div class="number flex item-center justify-center"><span class="bold">04</span></div>
                         <div class="number-text flex">
                             <div>
@@ -247,61 +278,64 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
             </div>
-        </div>
-        <div class=" container-1440">
-            <div class="formulaire flex justify-center flex-column item-center gap-40">
-                <h2 class="bold">JOIN HYDRA</h2>
-                <div class="line-separated"></div>
-                <h2>Let’s Build Your VR Experience</h2>
-                <form action="#" method="post" class="flex space-arround">
-                    <div class="flex name">
-                        <div>
-                            <input type="text" name="name" id="name" placeholder="First Name">
+            <div class=" container-1440">
+                <div class="formulaire flex justify-center flex-column item-center gap-40">
+                    <h2 class="bold">JOIN HYDRA</h2>
+                    <div class="line-separated"></div>
+                    <h2 class="ligth small-6">Let’s Build Your VR Experience</h2>
+                    <form action="#" method="post" class="flex space-arround">
+                        <div class="flex name">
+                            <div>
+                                <input type="text" name="name" id="name" placeholder="First Name">
+                            </div>
+                            <div>
+                                <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+                            </div>
                         </div>
-                        <div>
-                            <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+                        <div class="flex email">
+                            <div>
+                                <input type="email" name="email" id="email" placeholder="Email">
+                            </div>
+                            <div>
+                                <input type="tel" name="tel" id="tel" placeholder="Phone Number">
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex email">
-                        <div>
-                            <input type="email" name="email" id="email" placeholder="Email">
+                        <div class="subject">
+                            <input type="text" name="subject" id="subject" placeholder="Subject">
                         </div>
-                        <div>
-                            <input type="tel" name="tel" id="tel" placeholder="Phone Number">
+                        <div class="text-message">
+                            <textarea name="message" id="message" cols="30" rows="10"
+                                placeholder="Tell Us Something..."></textarea>
                         </div>
-                    </div>
-                    <div class="subject">
-                        <input type="text" name="subject" id="subject" placeholder="Subject">
-                    </div>
-                    <div class="text-message">
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Tell Us Something..."></textarea>
-                    </div>
-                    <div class="btn-form">
-                        <button type="submit" class="btn1">SEND TO HYDRA</button>
-                    </div>
-                </form>
+                        <div class="btn-form">
+                            <button type="submit" class="btn1">SEND TO HYDRA</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
-    
-        </div>
     </main>
     <footer class="footer container-1440 flex space-between">
         <div class="flex space-between width100">
-            <div class="flex item-center"><img src="./public/img/logo-solo.png" alt="logo"></div>
-            <div class="line-footer"></div>
-            <div>
+            <div class="flex item-center marge-responsive"><img src="./public/img/logo-solo.png" alt="logo"></div>
+            <div class="line-footer responsive-none"></div>
+            <div class=" responsive-none">
                 <nav>
                     <ul>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">SERVICES</a></li>
-                    <li><a href="">TECHNOLOGIES</a></li>
-                    <li><a href="">HOW TO</a></li>
-                    <li><a href="">JOIN HYDRA</a></li>
-                </ul>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">SERVICES</a></li>
+                        <li><a href="">TECHNOLOGIES</a></li>
+                        <li><a href="">HOW TO</a></li>
+                        <li><a href="">JOIN HYDRA</a></li>
+                    </ul>
                 </nav>
             </div>
-            <div class="line-footer"></div>
-            <div>
+            <div class="line-footer responsive-none"></div>
+            <div class="responsive-none">
                 <nav>
                     <ul>
                         <li><a href="">F.A.Q</a></li>
@@ -311,9 +345,9 @@
                     </ul>
                 </nav>
             </div>
-            <div class="line-footer"></div>
-            <div>
-                <p>SOCIALIZE WITH HYDRA</p>
+            <div class="line-footer responsive-none"></div>
+            <div class="social">
+                <p class="">SOCIALIZE WITH HYDRA</p>
                 <div class="flex social-nav">
                     <div><a href=""><img src="./public/img/facebook.png" alt=""></a></div>
                     <div><a href=""><img src="./public/img/twitter.png" alt=""></a></div>
@@ -330,6 +364,8 @@
             <p>2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED </p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./public/js/app.js" defer></script>
 </body>
 
 </html>
